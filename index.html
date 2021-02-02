@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>AnnieCannons slides</title>
+    <title>AnnieCannons Intro to API slides</title>
 
     <meta name="description" content="AnnieCannons class slides">
     <meta name="author" content="AnnieCannons">
@@ -15,6 +15,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
+    <link rel="icon" type="image/png" href="img/AC_Asterisk.png">      
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/league.css" id="theme">
 
@@ -49,6 +50,11 @@
             <img src="img/apiimage.jpg" alt="Visual Diagram of APIs">
         </section>
 
+        <section>
+            <h2>Introduction to APIs Review Study Guide</h2>
+            <p>Click <a href="https://docs.google.com/document/d/1tIE4zPw2t7e8kxJknyILRCoM8VY5xXjaZ7Dpl9jjtdg/edit?usp=sharing" target="_blank">here</a> to review.</p>
+        </section>
+
         <!--Slide 1-->
 
         <section>
@@ -64,7 +70,7 @@
 
          <section>
               <p>
-                 As a programmer, you don't want to install a database of the all world’s addresses and algorithms in order to search them on your server. (hint: just use Google's API)
+                 As a programmer, you don't want to install a database of all the world’s addresses and algorithms in order to search them on your server. (hint: just use Google's API)
               </p>
               <img src="img/Prog.png" alt="Cartoon about computer magic">
               <aside class="notes">It would be easier to just use the Google Maps API to geocode an address!</aside>
@@ -130,7 +136,7 @@
             <ul>
                 <li class="fragment">In 2013, there were over 10,000 APIs published by companies for open consumption.</li>
                 <li class="fragment">Companies like Google, Instagram, and Square publish APIs so that your website can access their information in a secure way. This boosts traffic and business for them.</li>
-                <li class="fragment">You can learn about many different companies and their APIs <a href="https://www.codecademy.com/apis">here</a></li>
+                <li class="fragment">You can learn about many different companies and their APIs <a href="https://www.codecademy.com/apis" target="_blank">here</a></li>
             </ul>
             <aside class="notes"></aside>
         </section> 
@@ -196,16 +202,58 @@
             <p>
                APIs are so useful! We need to understand HOW to best use APIs, WHAT APIs are out there, and WHY you should use them.
             </p>
-            <a href="https://www.youtube.com/watch?v=M4Kspm_6RDg">Watch this!</a>
+            <a href="https://www.youtube.com/watch?v=M4Kspm_6RDg" target="_blank">Watch this!</a>
             <br>
-            <a href="https://www.youtube.com/watch?time_continue=52&v=_49_6pjTXiQ">And this!</a>
+            <a href="https://www.youtube.com/watch?time_continue=52&v=_49_6pjTXiQ" target="_blank">And this!</a>
+        </section>
+
+        <section>
+            <h2>
+               REST APIs
+            </h2>
+            <p>REST APIs conform to a set of constraints.<br>
+            <a href="https://www.redhat.com/en/topics/api/what-is-a-rest-api" target="_blank">Read this article</a>.</p>
+            <p>Then let's watch the first 6 minutes of<br><a href="https://www.youtube.com/watch?v=7YcW25PHnAA" target="_blank">this video</a>!
+            </p>
+        </section>
+
+        <section>
+            <h2>
+               Postman
+            </h2>
+            <p>Postman is an application that helps to develop, test, share and document APIs.<br>
+                <img width="300" src="img/postman.png" alt="Postman logo"><br>
+            <a href="https://www.postman.com/downloads/" target="_blank">Download here</a></p>
+            <a href="https://docs.google.com/spreadsheets/d/1dHybQNvrC0g8qR0Aolo75Cg68-Lc9ecrDJIfwZdYrbc/edit?usp=sharing" target="_blank"><img width="100" src="img/google-sheets.png" alt="Sheets logo"></a>
+            <img width="200" src="img/exercise.gif" alt="Exercise Time">
+        </section>
+
+        <section>
+            <h2>
+               Cat Facts with Postman
+            </h2>
+            <p>Let's use Postman to call on the Cat Facts API!</p>
+            <ol>
+                <li class="fragment">Revisit this <a href="https://codepen.io/LHack/pen/eYJZBPj" target="blank">Codepen</a> by running the code and viewing the data in the console.</li>
+                <li class="fragment">Then use Postman to make the same request, and view the data in Postman.</li>
+                <li class="fragment">Compare how the data appears in the console in Codepen as well as in the Postman application.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>
+               Reddit Puppies with Postman
+            </h2>
+            <p>Revisit this <a href="https://codepen.io/LHack/pen/KKVzWKj" target="blank">Codepen</a> to grab the information we need to make a GET request in Postman.</p>
+            <p>Then use Postman to view the data!</p>
+            <img width="500" src="img/puppies.jpg" alt="Puppies">
         </section>
 
         <section>
             <h2>HTTP Requests</h2>
             <ul>
                 <li class="fragment">APIs are accessed using HTTP, which is the language of the Internet.</li>
-                <li class="fragment">You make an HTTP request using your browser every time you visit a URL. Your browser is doing some of the work behind the scenes, though; there is more to an HTTP request than a URL. Learn all of the parts of an HTTP request <a href="https://www.youtube.com/watch?v=pHFWGN-upGM">here</a>.</li>
+                <li class="fragment">You make an HTTP request using your browser every time you visit a URL. Your browser is doing some of the work behind the scenes, though; there is more to an HTTP request than a URL. Learn all of the parts of an HTTP request <a href="https://www.youtube.com/watch?v=pHFWGN-upGM" target="_blank">here</a>.</li>
             </ul>
         </section>
 
@@ -213,7 +261,7 @@
         <h2>HTTP Requests</h2>
             <ul>
                 <li class="fragment">You can have your website build and send HTTP requests using Javascript (or another language like Python or Ruby). This allows you to make more complex requests with more than just a URL.</li>
-                <li class="fragment">Many companies have written libraries to build & make API requests for you. For example, the Google Maps API has a <a href="https://developers.google.com/maps/documentation/javascript/">Javascript library</a>. This library is used to build an HTTP request, send that request to the Google Maps API, and even receive and interpret the response.</li>
+                <li class="fragment">Many companies have written libraries to build & make API requests for you. For example, the Google Maps API has a <a href="https://developers.google.com/maps/documentation/javascript/" target="_blank">Javascript library</a>. This library is used to build an HTTP request, send that request to the Google Maps API, and even receive and interpret the response.</li>
             </ul>
         </section>
             
@@ -248,6 +296,9 @@
                 Let's use the Google Maps API!
             </h2>
             <img src="img/london.png">
+            <br>
+            <a href="https://docs.google.com/spreadsheets/d/1dHybQNvrC0g8qR0Aolo75Cg68-Lc9ecrDJIfwZdYrbc/edit?usp=sharing" target="_blank"><img width="100" src="img/google-sheets.png" alt="Sheets logo"></a>
+            <img width="200" src="img/exercise.gif" alt="Exercise Time">
             <aside class="notes"></aside>
         </section> 
         
@@ -361,7 +412,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
             <h2>
                 Challenge
             </h2>
-            <p>Go to <a href="http://www.SnazzyMaps.com">Snazzy Maps</a> and find a map style that you like and copy it.
+            <p>Go to <a href="https://snazzymaps.com/" target="_blank">Snazzy Maps</a> and find a map style that you like and copy it.
             <pre><code class="hljs" data-trim contenteditable>
 var map = new google.maps.Map(document.getElementById('googleMap'), {
     center: // Add your location here
@@ -375,13 +426,34 @@ var map = new google.maps.Map(document.getElementById('googleMap'), {
             <aside class="notes"></aside>
         </section> 
 
+        <section>
+            <h2>Marvel API Key Exercise</h2>
+            <p>Ask a user for a character name, then make an API call to fetch and then display the character's thumbnail, name, and description to the user.</p>
+            <p><a href="#" target="_blank">Click here</a> for the instructions and links to resources to help you sign up for an API key, use <code style="color: aqua">async</code>/<code style="color: aqua">await</code> and <code style="color: aqua">fetch()</code>.
+            <br>
+            <a href="https://docs.google.com/spreadsheets/d/1dHybQNvrC0g8qR0Aolo75Cg68-Lc9ecrDJIfwZdYrbc/edit?usp=sharing" target="_blank"><img width="300" src="img/google-sheets.png" alt="Sheets logo"></a>
+            <img src="img/exercise.gif" alt="Exercise Time">
+            <aside class="notes"></aside>
+        </section>
+
+        <!-- <section>
+            <h2>Courses in Pluralsight</h2>
+            <p><a href="https://app.pluralsight.com/library/courses/creating-web-apis-developers-love/table-of-contents" target="_blank">Build your own API</a></p>
+            <p><a href="https://app.pluralsight.com/library/courses/google-maps-api-get-started/table-of-contents" target="_blank">Use Google Maps API</a></p>
+        </section>
+         -->
+        <section>
+            <h2>More on Web APIs</h2>
+            <p>Watch these <a href="https://docs.google.com/document/d/1uzAOfnqKt_tnuI7kWHu5Sc_jMtlzuP1EeMmN0enhSuY/edit?usp=sharing" target="_blank">Web API videos</a>.</p>
+            <a href="https://docs.google.com/spreadsheets/d/1dHybQNvrC0g8qR0Aolo75Cg68-Lc9ecrDJIfwZdYrbc/edit?usp=sharing" target="_blank"><img width="300" src="img/google-sheets.png" alt="Sheets logo"></a>
+            <img src="img/exercise.gif" alt="Exercise Time">
+        </section>
 
         <section>
-            <h2>Courses in Pluralsight</h2>
-            <p><a href="https://app.pluralsight.com/library/courses/creating-web-apis-developers-love/table-of-contents">Build your own API</a></p>
-            <p><a href="https://app.pluralsight.com/library/courses/google-maps-api-get-started/table-of-contents">Use Google Maps API</a></p>
+            <h2>Introduction to APIs Roundup</h2>
+            <p>Click <a href="https://docs.google.com/document/d/1tIE4zPw2t7e8kxJknyILRCoM8VY5xXjaZ7Dpl9jjtdg/edit?usp=sharing" target="_blank">here</a> to review.</p>
         </section>
-        
+
         <!-- END SLIDE -->
         <section style="text-align: left;">
             <h1>THE END</h1>
@@ -392,6 +464,8 @@ var map = new google.maps.Map(document.getElementById('googleMap'), {
 
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/zoomin.js"></script>
 <script src="lib/js/head.min.js"></script>
 <script src="js/reveal.js"></script>
 
