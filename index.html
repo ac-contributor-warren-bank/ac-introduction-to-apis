@@ -157,7 +157,9 @@
           <ul>
             <li class="fragment">
               Open this URL in your browser:
-              https://www.googleapis.com/books/v1/volumes?q=little+women+inauthor:alcott
+              <span class="aqua">
+                https://www.googleapis.com/books/v1/volumes?q=little+women+inauthor:alcott</span
+              >
             </li>
             <li class="fragment">
               Congratulations! You’ve successfully made an API request. The
@@ -167,7 +169,9 @@
             <li class="fragment">
               Try replacing the parameters (the part after “q=”) to find another
               book. For example:
-              https://www.googleapis.com/books/v1/volumes?q=very+hungry+caterpillar
+              https://www.googleapis.com/books/v1/volumes?q=<span class="aqua"
+                >very+hungry+caterpillar</span
+              >
             </li>
           </ul>
         </section>
@@ -195,7 +199,7 @@
                 href="https://www.youtube.com/watch?v=Rha1_St_9kw"
                 target="_blank"
                 >here</a
-              >
+              >.
             </li>
           </ul>
           <aside class="notes"></aside>
@@ -236,8 +240,8 @@
             </li>
             <ul>
               <li class="fragment">
-                Example: Starbucks asks Google Maps for directions to your
-                closest location.
+                <span class="yellow">Example</span>: Starbucks asks Google Maps
+                for directions to your closest location.
               </li>
             </ul>
           </ul>
@@ -252,7 +256,8 @@
           </p>
           <ul>
             <li class="fragment">
-              Example: You can search for books through Google Books.
+              <span class="yellow">Example</span>: You can search for books
+              through Google Books.
             </li>
           </ul>
         </section>
@@ -267,9 +272,9 @@
           </p>
           <ul>
             <li class="fragment">
-              Example: You can sign into many websites using your Facebook
-              account, which then automatically import your name, email address,
-              etc.
+              <span class="yellow">Example</span>: You can sign into many
+              websites using your Facebook account, which then automatically
+              import your name, email address, etc.
             </li>
           </ul>
         </section>
@@ -463,6 +468,14 @@
 
         <section>
           <h2>Let's use the Google Maps API!</h2>
+          <p>
+            <a
+              href="https://docs.google.com/document/d/1Mn24yFzwyHIKc8-0-PRzQ55sD5BH9rBCPlhR0hyTIz4/edit?usp=sharing"
+              target="_blank"
+              >Click here</a
+            >
+            for instructions.
+          </p>
           <img src="img/london.png" />
           <br />
           <a href="https://trello.com/b/RQrD5Ye2/" target="_blank"
@@ -474,7 +487,7 @@
 
         <!--Slide 13-->
 
-        <section>
+        <!-- <section>
           <h2>Using the Google Map API</h2>
           <h4>1. Load the Google API</h4>
           <p>
@@ -485,11 +498,11 @@
 <script src="http://maps.googleapis.com/maps/api/js"></script>
             </code></pre>
           <aside class="notes"></aside>
-        </section>
+        </section> -->
 
         <!--Slide 14-->
 
-        <section>
+        <!-- <section>
           <h2>Google Maps API</h2>
           <h4>2.Set Map Properties</h4>
           <p>Create a function to initialize the map:</p>
@@ -509,11 +522,11 @@ var mapProp = {
 };
             </code></pre>
           <aside class="notes"></aside>
-        </section>
+        </section> -->
 
         <!--Slide 15-->
 
-        <section>
+        <!-- <section>
           <h2>How the code works:</h2>
           <ul>
             <li class="fragment">
@@ -543,11 +556,11 @@ var mapProp = {
             </ul>
           </ul>
           <aside class="notes"></aside>
-        </section>
+        </section> -->
 
         <!--Slide 16-->
 
-        <section>
+        <!-- <section>
           <h2>Google Maps API</h2>
           <h4>3. Create a Map Container</h4>
           <p>
@@ -557,11 +570,11 @@ var mapProp = {
 <div id="googleMap" style="width:500px;height:380px;"></div>
               </code></pre>
           <aside class="notes"></aside>
-        </section>
+        </section> -->
 
         <!--Slide 17-->
 
-        <section>
+        <!-- <section>
           <h2>Google Maps API</h2>
           <h4>4. Create a Map Object</h4>
           <pre><code class="hljs" data-trim contenteditable>
@@ -572,11 +585,11 @@ var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
             id="googleMap", using the parameters that are passed (mapProp).
           </p>
           <aside class="notes"></aside>
-        </section>
+        </section> -->
 
         <!--Slide 18-->
 
-        <section>
+        <!-- <section>
           <h2>Google Maps API</h2>
           <h4>5. Add an Event Listener to Load the Map</h4>
           <p>
@@ -587,7 +600,7 @@ var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
 google.maps.event.addDomListener(window, 'load', initialize);
             </code></pre>
           <aside class="notes"></aside>
-        </section>
+        </section> -->
 
         <!--Slide 19-->
 
@@ -629,10 +642,11 @@ var map = new google.maps.Map(document.getElementById('googleMap'), {
             >
             and <code style="color: aqua">fetch()</code>.
             <br />
-            <a
-              href="https://docs.google.com/spreadsheets/d/1dHybQNvrC0g8qR0Aolo75Cg68-Lc9ecrDJIfwZdYrbc/edit?usp=sharing"
-              target="_blank"
-              ><img width="300" src="img/google-sheets.png" alt="Sheets logo"
+            <a href="https://trello.com/b/RQrD5Ye2/" target="_blank"
+              ><img
+                width="300"
+                src="img/trello-logo-blue.png"
+                alt="Trello logo"
             /></a>
             <img src="img/exercise.gif" alt="Exercise Time" />
           </p>
@@ -656,7 +670,7 @@ var map = new google.maps.Map(document.getElementById('googleMap'), {
               >Web API videos</a
             >.
           </p>
-          <!-- <a href="https://docs.google.com/spreadsheets/d/1dHybQNvrC0g8qR0Aolo75Cg68-Lc9ecrDJIfwZdYrbc/edit?usp=sharing" target="_blank"><img width="300" src="img/google-sheets.png" alt="Sheets logo"></a>
+          <!-- <a href="https://trello.com/b/RQrD5Ye2/" target="_blank"><img width="300" src="img/trello-logo-blue.png" alt="Trello logo"></a>
             <img src="img/exercise.gif" alt="Exercise Time"> -->
         </section>
 
