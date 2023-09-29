@@ -1,0 +1,9 @@
+.splide > .splide__track .splide__slide {font-family: sans-serif; font-size: 36px; padding: 1em;}
+.splide > .splide__track .splide__slide aside.notes {display: none;}
+.splide > .splide__track .splide__slide img {max-width: 100%;}
+.splide > .splide__track .splide__slide a {text-decoration: none; color: #13daec;}
+.splide > .splide__track .splide__slide table th,
+.splide > .splide__track .splide__slide table td {border-bottom: 1px solid; padding: 0.2em 0.5em;}
+.splide > .splide__track .splide__slide .aqua   {color: aqua;}
+.splide > .splide__track .splide__slide .green  {color: green;}
+.splide > .splide__track .splide__slide .yellow {color: yellow;}

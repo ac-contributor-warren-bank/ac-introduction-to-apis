@@ -1,0 +1,11 @@
+body {background-color: #111; color: #eee; margin:0; padding:0;}
+.splide {position: relative; width: 100%; height: 100%;}
+.splide > .splide__arrows {position: absolute; top: .5em; width: 100%; height: 2em;}
+.splide > .splide__arrows button {outline: none;}
+.splide > .splide__track {}
+.splide > .splide__track .splide__slide {padding: 2em; min-height: 9em;}
+.splide > .splide__track .splide__slide:not(.is-active) {height: 0px;}
+.splide > .splide__track .splide__slide.centered {text-align: center;}
+.splide > .splide__track .splide__slide.centered > div {display: inline-block; text-align: left;}
+.splide > .splide__pagination {bottom: unset; top: .5em;}
+.splide > .splide__pagination button {outline: none;}
