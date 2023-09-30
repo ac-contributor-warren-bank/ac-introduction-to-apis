@@ -1,893 +1,851 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
-
+    <meta charset="UTF-8">
     <title>AnnieCannons Intro to API slides</title>
+    <link rel="icon" href="https://anniecannons.org/favicon.png" />
 
-    <meta name="description" content="AnnieCannons class slides" />
-    <meta name="author" content="AnnieCannons" />
+    <link rel="stylesheet" href="s5/ui/default/slides.css" type="text/css" media="projection" id="slideProj" />
+    <link rel="stylesheet" href="s5/ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
+    <link rel="stylesheet" href="s5/ui/default/print.css" type="text/css" media="print" id="slidePrint" />
+    <link rel="stylesheet" href="s5/ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/styles/default.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/styles/github-dark.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
 
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta
-      name="apple-mobile-web-app-status-bar-style"
-      content="black-translucent"
-    />
-
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"
-    />
-
-    <link rel="icon" type="image/png" href="img/AC_Asterisk.png" />
-    <link rel="stylesheet" href="css/reveal.css" />
-    <link rel="stylesheet" href="css/theme/league.css" id="theme" />
-
-    <!-- Code syntax highlighting -->
-    <link rel="stylesheet" href="lib/css/zenburn.css" />
-    <link rel="stylesheet" href="css/classcolors.css" />
-
-    <!-- Printing and PDF exports -->
-    <script>
-      var link = document.createElement("link");
-      link.rel = "stylesheet";
-      link.type = "text/css";
-      link.href = window.location.search.match(/print-pdf/gi)
-        ? "css/print/pdf.css"
-        : "css/print/paper.css";
-      document.getElementsByTagName("head")[0].appendChild(link);
-    </script>
-
-    <!--[if lt IE 9]>
-      <script src="lib/js/html5shiv.js"></script>
-    <![endif]-->
+    <script src="s5/ui/default/slides.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/highlight.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/languages/javascript.min.js"></script>
+    <script src="js/scripts.js"></script>
   </head>
-
   <body>
-    <div class="reveal">
-      <!-- Any section element inside of this container is displayed as a slide -->
-      <div class="slides">
-        <!--Introduction slide-->
+    <div class="layout">
+      <div id="currentSlide"></div>
+      <div id="header"></div>
+      <div id="footer">
+        <div id="controls"></div>
+      </div>
+    </div>
+    <div class="presentation">
 
-        <section>
-          <h1>Introduction to APIs</h1>
-          <img src="img/apiimage.jpg" alt="Visual Diagram of APIs" />
-        </section>
+      <div class="slide">
+        <h1>Introduction to APIs</h1>
+        <img src="img/apiimage.jpg" alt="Visual Diagram of APIs" />
+      </div>
 
-        <!-- <section>
-            <h2>Introduction to APIs Review Study Guide</h2>
-            <p>Click <a href="https://docs.google.com/document/d/1tIE4zPw2t7e8kxJknyILRCoM8VY5xXjaZ7Dpl9jjtdg/edit?usp=sharing" target="_blank">here</a> to review.</p>
-        </section> -->
+      <!--
+      <div class="slide">
+        <h2>Introduction to APIs Review Study Guide</h2>
+        <p>Click <a href="https://docs.google.com/document/d/1tIE4zPw2t7e8kxJknyILRCoM8VY5xXjaZ7Dpl9jjtdg/edit?usp=sharing" target="_blank">here</a> to review.</p>
+      </div>
+      -->
 
-        <!--Slide 1-->
-        <section>
-          <h2>Web APIs Overview</h2>
-          <ul>
-            <li>What is an API?</li>
-            <li>What APIs Can Access</li>
-            <li>REST APIs</li>
-          </ul>
-        </section>
+      <div class="slide">
+        <h2>Web APIs Overview</h2>
+        <ul>
+          <li>What is an API?</li>
+          <li>What APIs Can Access</li>
+          <li>REST APIs</li>
+        </ul>
+      </div>
 
-        <!-- <section>
-          <h2>APIs in JS Textbook!</h2>
-          <p>Chapter 9 - Pages 409-423; 440-448</p>
-          <img
-            src="img/javascript-textbook-cover.png"
-            alt="JavaScript Textbook Cover"
-            style="width: 400px"
-          />
-        </section> -->
+      <!--
+      <div class="slide">
+        <h2>APIs in JS Textbook!</h2>
+        <p>Chapter 9 - Pages 409-423; 440-448</p>
+        <img
+          src="img/javascript-textbook-cover.png"
+          alt="JavaScript Textbook Cover"
+          style="width: 400px"
+        />
+      </div>
+      -->
 
-        <section>
-          <h2>API = Application Programming Interface</h2>
-          <p>
-            Have you ever wondered how Facebook is able to automatically display
-            your Instagram photos?
-          </p>
-          <p>
-            Have you ever wondered how the Starbucks store locator gives you
-            directions to the closest Starbucks? It asks Google Maps!
-          </p>
-          <aside class="notes"></aside>
-        </section>
+      <div class="slide">
+        <h2>API = Application Programming Interface</h2>
+        <p>
+          Have you ever wondered how Facebook is able to automatically display
+          your Instagram photos?
+        </p>
+        <p>
+          Have you ever wondered how the Starbucks store locator gives you
+          directions to the closest Starbucks? It asks Google Maps!
+        </p>
+        <aside class="notes"></aside>
+      </div>
 
-        <!--Slide 2-->
+      <div class="slide">
+        <p>
+          As a programmer, you don't want to install a database of all the
+          world’s addresses and algorithms in order to search them on your
+          server. (hint: just use Google's API)
+        </p>
+        <img src="img/Prog.png" alt="Cartoon about computer magic" />
+        <aside class="notes">
+          It would be easier to just use the Google Maps API to geocode an
+          address!
+        </aside>
+      </div>
 
-        <section>
-          <p>
-            As a programmer, you don't want to install a database of all the
-            world’s addresses and algorithms in order to search them on your
-            server. (hint: just use Google's API)
-          </p>
-          <img src="img/Prog.png" alt="Cartoon about computer magic" />
-          <aside class="notes">
-            It would be easier to just use the Google Maps API to geocode an
-            address!
-          </aside>
-        </section>
+      <div class="slide">
+        <h2>A helpful diagram</h2>
+        <img src="img/api.png" alt="APIs like a card catalog at a library" />
+        <p>
+          You can’t use the card catalog yourself because you don’t have
+          access and you don’t know how to use it.
+        </p>
+      </div>
 
-        <!--Slide 3-->
+      <div class="slide">
+        <h2>Imagine your website is looking for a book...</h2>
+      </div>
 
-        <section>
-          <h2>A helpful diagram</h2>
-          <img src="img/api.png" alt="APIs like a card catalog at a library" />
-          <p>
-            You can’t use the card catalog yourself because you don’t have
-            access and you don’t know how to use it.
-          </p>
-        </section>
+      <div class="slide">
+        <img src="img/api2.png" alt="Google Book Database API" />
+        <p>
+          Your website doesn’t know how to access or read the Google Books
+          database, but it can use the Google Books API to request the book.
+        </p>
+      </div>
 
-        <section>
-          <h2>Imagine your website is looking for a book...</h2>
-        </section>
+      <div class="slide">
+        <h2>How is an API like a librarian?</h2>
+        <table>
+          <tr>
+            <th>Librarian</th>
+            <th>API</th>
+          </tr>
+          <tr>
+            <td>Human Language (like English)</td>
+            <td>HTTP protocol</td>
+          </tr>
+          <tr>
+            <td>Question containing details (title and author)</td>
+            <td>Request containing parameters (title and author)</td>
+          </tr>
+          <tr>
+            <td>Answer</td>
+            <td>JSON response including URL</td>
+          </tr>
+        </table>
+      </div>
 
-        <section>
-          <img src="img/api2.png" alt="Google Book Database API" />
-          <p>
-            Your website doesn’t know how to access or read the Google Books
-            database, but it can use the Google Books API to request the book.
-          </p>
-        </section>
-
-        <section>
-          <h2>How is an API like a librarian?</h2>
-          <table>
-            <tr>
-              <th>Librarian</th>
-              <th>API</th>
-            </tr>
-            <tr>
-              <td>Human Language (like English)</td>
-              <td>HTTP protocol</td>
-            </tr>
-            <tr>
-              <td>Question containing details (title and author)</td>
-              <td>Request containing parameters (title and author)</td>
-            </tr>
-            <tr>
-              <td>Answer</td>
-              <td>JSON response including URL</td>
-            </tr>
-          </table>
-        </section>
-
-        <section>
-          <h2>Practice: Search for a Book</h2>
-          <ul>
-            <li class="fragment">
-              Open this URL in your browser:
-              <span class="aqua">
-                https://www.googleapis.com/books/v1/volumes?q=little+women+inauthor:alcott</span
-              >
-            </li>
-            <li class="fragment">
-              Congratulations! You’ve successfully made an API request. The
-              response has more information than we needed, but it does contain
-              the download URL we were looking for.
-            </li>
-            <li class="fragment">
-              Try replacing the parameters (the part after “q=”) to find another
-              book. For example:
-              https://www.googleapis.com/books/v1/volumes?q=<span class="aqua"
-                >very+hungry+caterpillar</span
-              >
-            </li>
-          </ul>
-        </section>
-
-        <!-- <section>
-            <h2>Extra Credit</h2>
-            <p class="fragment">Extra Credit: Look through the Google Books API Documentation to understand more of the possible parameters and response data. Beware: this is dense documentation! Use cmd+f to find what you’re interested in.</p>
-        </section> -->
-
-        <section>
-          <h2>Companies use APIs to boost traffic and business</h2>
-          <ul>
-            <li class="fragment">
-              In 2013, there were over 10,000 APIs published by companies for
-              open consumption.
-            </li>
-            <li class="fragment">
-              Companies like Google, Instagram, and Square publish APIs so that
-              your website can access their information in a secure way. This
-              boosts traffic and business for them.
-            </li>
-            <li class="fragment">
-              You can learn about many different companies and their APIs
-              <a
-                href="https://www.youtube.com/watch?v=Rha1_St_9kw"
-                target="_blank"
-                >here</a
-              >.
-            </li>
-          </ul>
-          <aside class="notes"></aside>
-        </section>
-
-        <!--Slide 4-->
-        <section>
-          <h2>Web APIs Overview</h2>
-          <ul>
-            <li class="green">What is an API?</li>
-            <li>What APIs Can Access</li>
-            <li>REST APIs</li>
-          </ul>
-        </section>
-
-        <!-- <section>
-            <h2>
-                What is a (web) API?
-            </h2>
-            <ul>
-                <li class="fragment">An API is a service that lets one website use data or functionality from another website</li>
-                <li class="fragment">APIs do all this by “exposing” some of a program’s internal functions to the outside world. </li>
-                <li class="fragment"> They make it possible to share data and take actions without requiring developers to share all of their software’s code. </li>
-                <li class="fragment">Most modern webpages rely on at least one API - like the Facebook API for social interaction.</li>
-            <ul>
-            <aside class="notes"></aside>
-        </section>  -->
-
-        <!--Slide 5-->
-
-        <section>
-          <h2>What APIs Can Access</h2>
-          <ul>
-            <li class="fragment">
-              1. Functionality: We use APIs to outsource part of our
-              application’s functionality to someone else, so we can focus on
-              the unique bits.
-            </li>
-            <ul>
-              <li class="fragment">
-                <span class="yellow">Example</span>: Starbucks asks Google Maps
-                for directions to your closest location.
-              </li>
-            </ul>
-          </ul>
-        </section>
-
-        <!--Slide 6-->
-
-        <section>
-          <p>
-            2. Public Data: There is a huge amount of data available, and APIs
-            make that data available to use in a structured way.
-          </p>
-          <ul>
-            <li class="fragment">
-              <span class="yellow">Example</span>: You can search for books
-              through Google Books.
-            </li>
-          </ul>
-        </section>
-
-        <!--Slide 7-->
-
-        <section>
-          <p>
-            3. User Data: We also use APIs to access data from other products
-            and integrate them with our own. Users use multiple products and
-            expect for them to work together - synergy.
-          </p>
-          <ul>
-            <li class="fragment">
-              <span class="yellow">Example</span>: You can sign into many
-              websites using your Facebook account, which then automatically
-              import your name, email address, etc.
-            </li>
-          </ul>
-        </section>
-
-        <!--Slide 8-->
-
-        <section>
-          <h2>The Diagram</h2>
-          <img src="img/diagram_apis.png" />
-          <p>This is all dynamic content.</p>
-          <aside class="notes">
-            Note the three things APIs can access: functionality, data, user
-            data. 
-          </aside>
-        </section>
-
-        <!--Slide 9-->
-
-        <section>
-          <h2>APIs are so useful!</h2>
-          <p>We need to understand:</p>
-          <ul>
-            <li>HOW to best use APIs</li>
-            <li>WHAT APIs are out there</li>
-            <li>WHY you should use them</li>
-          </ul>
-          <!-- <a href="https://www.youtube.com/watch?v=M4Kspm_6RDg" target="_blank">Watch this!</a> -->
-          <br />
-          <!-- <a href="https://www.youtube.com/watch?time_continue=52&v=_49_6pjTXiQ" target="_blank">And this!</a> -->
-        </section>
-
-        <section>
-          <h2>Web APIs Overview</h2>
-          <ul>
-            <li class="green">What is an API?</li>
-            <li class="green">What APIs Can Access</li>
-            <li>REST APIs</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>REST APIs</h2>
-          <p>
-            REST APIs conform to a set of constraints.<br />
-            <a href="https://www.ibm.com/cloud/learn/rest-apis" target="_blank"
-              >Read this article</a
-            >.
-          </p>
-          <p>
-            Then let's watch the first 6 minutes of<br /><a
-              href="https://www.youtube.com/watch?v=7YcW25PHnAA"
-              target="_blank"
-              >this video</a
-            >!
-          </p>
-          <aside class="notes">
-            Takeaway re: REST APIs - the main ways to make requests are GET and
-            POST. GraphQL allows you to write queries in the request itself,
-            structures queries in a certain way that mimics backend languages.
-            https://www.howtographql.com/basics/1-graphql-is-the-better-rest/
-          </aside>
-        </section>
-
-        <!-- <section>
-          <h2>Postman</h2>
-          <p>
-            Postman is an application that helps to develop, test, share and
-            document APIs.<br />
-            <img width="300" src="img/postman.png" alt="Postman logo" /><br />
-            <a href="https://www.postman.com/downloads/" target="_blank"
-              >Download here</a
+      <div class="slide">
+        <h2>Practice: Search for a Book</h2>
+        <ul class="incremental">
+          <li class="fragment">
+            Open this URL in your browser:
+            <span class="aqua">
+              https://www.googleapis.com/books/v1/volumes?q=little+women+inauthor:alcott</span
             >
-          </p>
-          <a
-            href="https://trello.com/b/RQrD5Ye2/"
+          </li>
+          <li class="fragment">
+            Congratulations! You’ve successfully made an API request. The
+            response has more information than we needed, but it does contain
+            the download URL we were looking for.
+          </li>
+          <li class="fragment">
+            Try replacing the parameters (the part after “q=”) to find another
+            book. For example:
+            https://www.googleapis.com/books/v1/volumes?q=<span class="aqua"
+              >very+hungry+caterpillar</span
+            >
+          </li>
+        </ul>
+      </div>
+
+      <!--
+      <div class="slide">
+          <h2>Extra Credit</h2>
+          <p class="fragment">Extra Credit: Look through the Google Books API Documentation to understand more of the possible parameters and response data. Beware: this is dense documentation! Use cmd+f to find what you’re interested in.</p>
+      </div>
+      -->
+
+      <div class="slide">
+        <h2>Companies use APIs to boost traffic and business</h2>
+        <ul class="incremental">
+          <li class="fragment">
+            In 2013, there were over 10,000 APIs published by companies for
+            open consumption.
+          </li>
+          <li class="fragment">
+            Companies like Google, Instagram, and Square publish APIs so that
+            your website can access their information in a secure way. This
+            boosts traffic and business for them.
+          </li>
+          <li class="fragment">
+            You can learn about many different companies and their APIs
+            <a
+              href="https://www.youtube.com/watch?v=Rha1_St_9kw"
+              target="_blank"
+              >here</a
+            >.
+          </li>
+        </ul>
+        <aside class="notes"></aside>
+      </div>
+
+      <div class="slide">
+        <h2>Web APIs Overview</h2>
+        <ul>
+          <li class="green">What is an API?</li>
+          <li>What APIs Can Access</li>
+          <li>REST APIs</li>
+        </ul>
+      </div>
+
+      <!--
+      <div class="slide">
+        <h2>
+          What is a (web) API?
+        </h2>
+        <ul class="incremental">
+          <li class="fragment">An API is a service that lets one website use data or functionality from another website</li>
+          <li class="fragment">APIs do all this by “exposing” some of a program’s internal functions to the outside world. </li>
+          <li class="fragment"> They make it possible to share data and take actions without requiring developers to share all of their software’s code. </li>
+          <li class="fragment">Most modern webpages rely on at least one API - like the Facebook API for social interaction.</li>
+        <ul>
+        <aside class="notes"></aside>
+      </div>
+      -->
+
+      <div class="slide">
+        <h2>What APIs Can Access</h2>
+        <p class="fragment incremental">
+          1. Functionality: We use APIs to outsource part of our
+          application’s functionality to someone else, so we can focus on
+          the unique bits.
+        </p>
+        <ul class="incremental">
+          <li class="fragment">
+            <span class="yellow">Example</span>: Starbucks asks Google Maps
+            for directions to your closest location.
+          </li>
+        </ul>
+      </div>
+
+      <div class="slide">
+        <p class="fragment incremental">
+          2. Public Data: There is a huge amount of data available, and APIs
+          make that data available to use in a structured way.
+        </p>
+        <ul class="incremental">
+          <li class="fragment">
+            <span class="yellow">Example</span>: You can search for books
+            through Google Books.
+          </li>
+        </ul>
+      </div>
+
+      <div class="slide">
+        <p class="fragment incremental">
+          3. User Data: We also use APIs to access data from other products
+          and integrate them with our own. Users use multiple products and
+          expect for them to work together - synergy.
+        </p>
+        <ul class="incremental">
+          <li class="fragment">
+            <span class="yellow">Example</span>: You can sign into many
+            websites using your Facebook account, which then automatically
+            import your name, email address, etc.
+          </li>
+        </ul>
+      </div>
+
+      <div class="slide">
+        <h2>The Diagram</h2>
+        <img src="img/diagram_apis.png" />
+        <p>This is all dynamic content.</p>
+        <aside class="notes">
+          Note the three things APIs can access: functionality, data, user
+          data. 
+        </aside>
+      </div>
+
+      <div class="slide">
+        <h2>APIs are so useful!</h2>
+        <p>We need to understand:</p>
+        <ul>
+          <li>HOW to best use APIs</li>
+          <li>WHAT APIs are out there</li>
+          <li>WHY you should use them</li>
+        </ul>
+      <!--
+        <a href="https://www.youtube.com/watch?v=M4Kspm_6RDg" target="_blank">Watch this!</a>
+        <br />
+        <a href="https://www.youtube.com/watch?time_continue=52&v=_49_6pjTXiQ" target="_blank">And this!</a>
+      -->
+      </div>
+
+      <div class="slide">
+        <h2>Web APIs Overview</h2>
+        <ul>
+          <li class="green">What is an API?</li>
+          <li class="green">What APIs Can Access</li>
+          <li>REST APIs</li>
+        </ul>
+      </div>
+
+      <div class="slide">
+        <h2>REST APIs</h2>
+        <p>
+          REST APIs conform to a set of constraints.<br />
+          <a href="https://www.ibm.com/cloud/learn/rest-apis" target="_blank"
+            >Read this article</a
+          >.
+        </p>
+        <p>
+          Then let's watch the first 6 minutes of<br /><a
+            href="https://www.youtube.com/watch?v=7YcW25PHnAA"
             target="_blank"
-            ><img width="100" src="img/trello-logo-blue.png" alt="Trello logo"
-          /></a>
-          <img width="200" src="img/exercise.gif" alt="Exercise Time" />
-        </section>
+            >this video</a
+          >!
+        </p>
+        <aside class="notes">
+          Takeaway re: REST APIs - the main ways to make requests are GET and
+          POST. GraphQL allows you to write queries in the request itself,
+          structures queries in a certain way that mimics backend languages.
+          https://www.howtographql.com/basics/1-graphql-is-the-better-rest/
+        </aside>
+      </div>
 
-        <section>
-          <h2>Cat Facts with Postman</h2>
-          <p>Let's use Postman to call on the Cat Facts API!</p>
-          <ol>
-            <li class="fragment">
-              Revisit this
-              <a href="https://codepen.io/LHack/pen/eYJZBPj" target="blank"
-                >Codepen</a
-              >
-              by running the code and viewing the data in the console.
-            </li>
-            <li class="fragment">
-              Then use Postman to make the same request, and view the data in
-              Postman.
-            </li>
-            <li class="fragment">
-              Compare how the data appears in the console in Codepen as well as
-              in the Postman application.
-            </li>
-          </ol>
-        </section>
+      <!--
+      <div class="slide">
+        <h2>Postman</h2>
+        <p>
+          Postman is an application that helps to develop, test, share and
+          document APIs.<br />
+          <img width="300" src="img/postman.png" alt="Postman logo" /><br />
+          <a href="https://www.postman.com/downloads/" target="_blank"
+            >Download here</a
+          >
+        </p>
+        <a
+          href="https://trello.com/b/RQrD5Ye2/"
+          target="_blank"
+          ><img width="100" src="img/trello-logo-blue.png" alt="Trello logo"
+        /></a>
+        <img width="200" src="img/exercise.gif" alt="Exercise Time" />
+      </div>
+      -->
 
-        <section>
-          <h2>Reddit Puppies with Postman</h2>
-          <p>
+      <!--
+      <div class="slide">
+        <h2>Cat Facts with Postman</h2>
+        <p>Let's use Postman to call on the Cat Facts API!</p>
+        <ol class="incremental">
+          <li class="fragment">
             Revisit this
-            <a href="https://codepen.io/LHack/pen/KKVzWKj" target="blank"
+            <a href="https://codepen.io/LHack/pen/eYJZBPj" target="blank"
               >Codepen</a
             >
-            to grab the information we need to make a GET request in Postman.
-          </p>
-          <p>Then use Postman to view the data!</p>
-          <img width="500" src="img/puppies.jpg" alt="Puppies" />
-        </section> -->
+            by running the code and viewing the data in the console.
+          </li>
+          <li class="fragment">
+            Then use Postman to make the same request, and view the data in
+            Postman.
+          </li>
+          <li class="fragment">
+            Compare how the data appears in the console in Codepen as well as
+            in the Postman application.
+          </li>
+        </ol>
+      </div>
+      -->
 
-        <section>
-          <h2>HTTP Requests</h2>
-          <ul>
-            <li class="fragment">
-              APIs are accessed using HTTP, which is the language of the
-              Internet.
-            </li>
-            <li class="fragment">
-              You make an HTTP request using your browser every time you visit a
-              URL. Your browser is doing some of the work behind the scenes,
-              though; there is more to an HTTP request than a URL. Learn all of
-              the parts of an HTTP request
-              <a
-                href="https://www.youtube.com/watch?v=pHFWGN-upGM"
-                target="_blank"
-                >here</a
-              >.
-            </li>
-          </ul>
-        </section>
-        <!-- 
-        <section>
-          <h2>HTTP Requests</h2>
-          <ul>
-            <li class="fragment">
-              You can have your website build and send HTTP requests using
-              Javascript (or another language like Python or Ruby). This allows
-              you to make more complex requests with more than just a URL.
-            </li>
-            <li class="fragment">
-              Many companies have written libraries to build & make API requests
-              for you. For example, the Google Maps API has a
-              <a
-                href="https://developers.google.com/maps/documentation/javascript/"
-                target="_blank"
-                >Javascript library</a
-              >. This library is used to build an HTTP request, send that
-              request to the Google Maps API, and even receive and interpret the
-              response.
-            </li>
-          </ul>
-        </section> -->
+      <!--
+      <div class="slide">
+        <h2>Reddit Puppies with Postman</h2>
+        <p>
+          Revisit this
+          <a href="https://codepen.io/LHack/pen/KKVzWKj" target="blank"
+            >Codepen</a
+          >
+          to grab the information we need to make a GET request in Postman.
+        </p>
+        <p>Then use Postman to view the data!</p>
+        <img width="500" src="img/puppies.jpg" alt="Puppies" />
+      </div>
+      -->
 
-        <!--Slide 10-->
-
-        <section>
-          <h2>How do APIs Work?</h2>
-          <!-- <h2>How do Client-side APIs work?</h2> -->
-          <img src="img/sparkholder-api.png" />
-          <aside class="notes"></aside>
-        </section>
-
-        <!--Slide 11-->
-
-        <section>
-          <h2>How do APIs work?</h2>
-          <ul>
-            <li class="fragment">
-              An API is used to bring in information from another server, and
-              there's only so many ways that you can do that in the client.
-            </li>
-            <li class="fragment">
-              The API itself isn’t really a box floating in space, so much as a
-              chunk of code that acts as a gatekeeper.
-            </li>
-            <li class="fragment">
-              That code helps translate the third party’s data into something
-              you can read, and it makes sure that only authorized users can
-              access the data (a process called “authentication”).
-            </li>
-          </ul>
-          <aside class="notes"></aside>
-        </section>
-
-        <!--Slide 12-->
-
-        <!-- <section>
-          <h2>Let's use the Google Maps API!</h2>
-          <p>
+      <div class="slide">
+        <h2>HTTP Requests</h2>
+        <ul class="incremental">
+          <li class="fragment">
+            APIs are accessed using HTTP, which is the language of the
+            Internet.
+          </li>
+          <li class="fragment">
+            You make an HTTP request using your browser every time you visit a
+            URL. Your browser is doing some of the work behind the scenes,
+            though; there is more to an HTTP request than a URL. Learn all of
+            the parts of an HTTP request
             <a
-              href="https://docs.google.com/document/d/1Mn24yFzwyHIKc8-0-PRzQ55sD5BH9rBCPlhR0hyTIz4/edit?usp=sharing"
+              href="https://www.youtube.com/watch?v=pHFWGN-upGM"
               target="_blank"
-              >Click here</a
-            >
-            for instructions.
-          </p>
-          <img src="img/london.png" />
-          <br />
-          <a href="https://trello.com/b/RQrD5Ye2/" target="_blank"
-            ><img width="100" src="img/trello-logo-blue.png" alt="Trello logo"
-          /></a>
-          <img width="200" src="img/exercise.gif" alt="Exercise Time" />
-          <aside class="notes"></aside>
-        </section> -->
+              >here</a
+            >.
+          </li>
+        </ul>
+      </div>
 
-        <!--Slide 13-->
+      <!-- 
 
-        <!-- <section>
-          <h2>Using the Google Map API</h2>
-          <h4>1. Load the Google API</h4>
-          <p>
-            The Google Maps API is a JavaScript library. It can be added to a
-            web page with a script tag:
-          </p>
-          <pre><code class="hljs" data-trim contenteditable>
+      <div class="slide">
+        <h2>HTTP Requests</h2>
+        <ul class="incremental">
+          <li class="fragment">
+            You can have your website build and send HTTP requests using
+            Javascript (or another language like Python or Ruby). This allows
+            you to make more complex requests with more than just a URL.
+          </li>
+          <li class="fragment">
+            Many companies have written libraries to build & make API requests
+            for you. For example, the Google Maps API has a
+            <a
+              href="https://developers.google.com/maps/documentation/javascript/"
+              target="_blank"
+              >Javascript library</a
+            >. This library is used to build an HTTP request, send that
+            request to the Google Maps API, and even receive and interpret the
+            response.
+          </li>
+        </ul>
+      </div>
+      -->
+
+      <div class="slide">
+        <h2>How do APIs Work?</h2>
+      <!-- <h2>How do Client-side APIs work?</h2> -->
+        <img src="img/sparkholder-api.png" />
+        <aside class="notes"></aside>
+      </div>
+
+      <div class="slide">
+        <h2>How do APIs work?</h2>
+        <ul class="incremental">
+          <li class="fragment">
+            An API is used to bring in information from another server, and
+            there's only so many ways that you can do that in the client.
+          </li>
+          <li class="fragment">
+            The API itself isn’t really a box floating in space, so much as a
+            chunk of code that acts as a gatekeeper.
+          </li>
+          <li class="fragment">
+            That code helps translate the third party’s data into something
+            you can read, and it makes sure that only authorized users can
+            access the data (a process called “authentication”).
+          </li>
+        </ul>
+        <aside class="notes"></aside>
+      </div>
+
+      <!--
+      <div class="slide">
+        <h2>Let's use the Google Maps API!</h2>
+        <p>
+          <a
+            href="https://docs.google.com/document/d/1Mn24yFzwyHIKc8-0-PRzQ55sD5BH9rBCPlhR0hyTIz4/edit?usp=sharing"
+            target="_blank"
+            >Click here</a
+          >
+          for instructions.
+        </p>
+        <img src="img/london.png" />
+        <br />
+        <a href="https://trello.com/b/RQrD5Ye2/" target="_blank"
+          ><img width="100" src="img/trello-logo-blue.png" alt="Trello logo"
+        /></a>
+        <img width="200" src="img/exercise.gif" alt="Exercise Time" />
+        <aside class="notes"></aside>
+      </div>
+      -->
+
+      <!--
+      <div class="slide">
+        <h2>Using the Google Map API</h2>
+        <h4>1. Load the Google API</h4>
+        <p>
+          The Google Maps API is a JavaScript library. It can be added to a
+          web page with a script tag:
+        </p>
+        <pre><code class="hljs" data-trim contenteditable>
 <script src="http://maps.googleapis.com/maps/api/js"></script>
-            </code></pre>
-          <aside class="notes"></aside>
-        </section> -->
+</code></pre>
+        <aside class="notes"></aside>
+      </div>
+      -->
 
-        <!--Slide 14-->
-
-        <!-- <section>
-          <h2>Google Maps API</h2>
-          <h4>2.Set Map Properties</h4>
-          <p>Create a function to initialize the map:</p>
-          <pre><code class="hljs" data-trim contenteditable>
+      <!--
+      <div class="slide">
+        <h2>Google Maps API</h2>
+        <h4>2.Set Map Properties</h4>
+        <p>Create a function to initialize the map:</p>
+        <pre><code class="hljs" data-trim contenteditable>
 function initialize() {
 }
-            </code></pre>
-          <p>
-            In the initialize function, create an object (mapProp) to define the
-            properties for the map:
-          </p>
-          <pre><code class="hljs" data-trim contenteditable>
+</code></pre>
+        <p>
+          In the initialize function, create an object (mapProp) to define the
+          properties for the map:
+        </p>
+        <pre><code class="hljs" data-trim contenteditable>
 var mapProp = {
   center:new google.maps.LatLng(51.508742, -0.120850),
   zoom: 7,
   mapTypeId: google.maps.MapTypeId.ROADMAP
 };
-            </code></pre>
-          <aside class="notes"></aside>
-        </section> -->
+</code></pre>
+        <aside class="notes"></aside>
+      </div>
+      -->
 
-        <!--Slide 15-->
+      <!--
+      <div class="slide">
+        <h2>How the code works:</h2>
+        <ul class="incremental">
+          <li class="fragment">
+            The <i>center</i> property specifies where to center the map.
+          </li>
+          <li class="fragment">
+            The <i>LatLng</i> object centers the map on a specific point. Pass
+            the coordinates in the order: latitude, longitude.
+          </li>
+          <li class="fragment">
+            The <i>zoom</i> property specifies the zoom level for the map.
+            zoom: 0 shows a map of the Earth fully zoomed out.
+          </li>
+          <li class="fragment">
+            The <i>mapTypeId</i> property specifies the map type to display.
+            The following map types are supported:
+          </li>
+          <li class="fragment">ROADMAP (normal, default 2D map)</li>
+          <li class="fragment">SATELLITE (photographic map)</li>
+          <li class="fragment">
+            HYBRID (photographic map + roads and city names)
+          </li>
+          <li class="fragment">
+            TERRAIN (map with mountains, rivers, etc.)
+          </li>
+        </ul>
+        <aside class="notes"></aside>
+      </div>
+      -->
 
-        <!-- <section>
-          <h2>How the code works:</h2>
-          <ul>
-            <li class="fragment">
-              The <i>center</i> property specifies where to center the map.
-            </li>
-            <li class="fragment">
-              The <i>LatLng</i> object centers the map on a specific point. Pass
-              the coordinates in the order: latitude, longitude.
-            </li>
-            <li class="fragment">
-              The <i>zoom</i> property specifies the zoom level for the map.
-              zoom: 0 shows a map of the Earth fully zoomed out.
-            </li>
-            <li class="fragment">
-              The <i>mapTypeId</i> property specifies the map type to display.
-              The following map types are supported:
-            </li>
-            <ul>
-              <li class="fragment">ROADMAP (normal, default 2D map)</li>
-              <li class="fragment">SATELLITE (photographic map)</li>
-              <li class="fragment">
-                HYBRID (photographic map + roads and city names)
-              </li>
-              <li class="fragment">
-                TERRAIN (map with mountains, rivers, etc.)
-              </li>
-            </ul>
-          </ul>
-          <aside class="notes"></aside>
-        </section> -->
-
-        <!--Slide 16-->
-
-        <!-- <section>
-          <h2>Google Maps API</h2>
-          <h4>3. Create a Map Container</h4>
-          <p>
-            Create a div element to hold the map. Use CSS to size the element:
-          </p>
-          <pre><code class="hljs" data-trim contenteditable>
+      <!--
+      <div class="slide">
+        <h2>Google Maps API</h2>
+        <h4>3. Create a Map Container</h4>
+        <p>
+          Create a div element to hold the map. Use CSS to size the element:
+        </p>
+        <pre><code class="hljs" data-trim contenteditable>
 <div id="googleMap" style="width:500px;height:380px;"></div>
-              </code></pre>
-          <aside class="notes"></aside>
-        </section> -->
+</code></pre>
+        <aside class="notes"></aside>
+      </div>
+      -->
 
-        <!--Slide 17-->
-
-        <!-- <section>
-          <h2>Google Maps API</h2>
-          <h4>4. Create a Map Object</h4>
-          <pre><code class="hljs" data-trim contenteditable>
+      <!--
+      <div class="slide">
+        <h2>Google Maps API</h2>
+        <h4>4. Create a Map Object</h4>
+        <pre><code class="hljs" data-trim contenteditable>
 var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
-            </code></pre>
-          <p>
-            The code above creates a new map inside the div element with
-            id="googleMap", using the parameters that are passed (mapProp).
-          </p>
-          <aside class="notes"></aside>
-        </section> -->
+</code></pre>
+        <p>
+          The code above creates a new map inside the div element with
+          id="googleMap", using the parameters that are passed (mapProp).
+        </p>
+        <aside class="notes"></aside>
+      </div>
+      -->
 
-        <!--Slide 18-->
-
-        <!-- <section>
-          <h2>Google Maps API</h2>
-          <h4>5. Add an Event Listener to Load the Map</h4>
-          <p>
-            Add a DOM listener that will execute the initialize() function on
-            window load (when the page is loaded):
-          </p>
-          <pre><code class="hljs" data-trim contenteditable>
+      <!--
+      <div class="slide">
+        <h2>Google Maps API</h2>
+        <h4>5. Add an Event Listener to Load the Map</h4>
+        <p>
+          Add a DOM listener that will execute the initialize() function on
+          window load (when the page is loaded):
+        </p>
+        <pre><code class="hljs" data-trim contenteditable>
 google.maps.event.addDomListener(window, 'load', initialize);
-            </code></pre>
-          <aside class="notes"></aside>
-        </section> -->
+</code></pre>
+        <aside class="notes"></aside>
+      </div>
+      -->
 
-        <!--Slide 19-->
-
-        <!-- <section>
-          <h2>Challenge</h2>
-          <p>
-            Go to
-            <a href="https://snazzymaps.com/" target="_blank">Snazzy Maps</a>
-            and find a map style that you like and copy it.
-          </p>
-          <pre><code class="hljs" data-trim contenteditable>
+      <!--
+      <div class="slide">
+        <h2>Challenge</h2>
+        <p>
+          Go to
+          <a href="https://snazzymaps.com/" target="_blank">Snazzy Maps</a>
+          and find a map style that you like and copy it.
+        </p>
+        <pre><code class="hljs" data-trim contenteditable>
 var map = new google.maps.Map(document.getElementById('googleMap'), {
     center: // Add your location here
     zoom: //Add your zoom here
     styles: //Add your array here
 });
-            </code></pre>
-          <p>Make your new map!</p>
-          <aside class="notes"></aside>
-        </section> -->
+</code></pre>
+        <p>Make your new map!</p>
+        <aside class="notes"></aside>
+      </div>
+      -->
 
-
-  
-      <section>
+      <div class="slide">
         <h2>Working with data on the web</h2>
         <ul>
             <li>JSON</li>
             <li>Using Fetch to make requests</li>
             <li>Async/Await</li>
         </ul>
-    </section>
-    
-    <!-- Slide 5 -->
-    <section>
+      </div>
+
+      <div class="slide">
         <h2>
             Sending/Receiving Data Across the Internet
         </h2>
         <p><span style="color: yellow;">JSON</span> = <span style="color: yellow;">J</span>ava<span style="color: yellow;">S</span>cript <span style="color: yellow;">O</span>bject <span style="color: yellow;">N</span>otation</p>
-        <ul>
+        <ul class="incremental">
             <li class="fragment">JSON is all about transmitting data objects </li>
             <li class="fragment">This is a way to store and send data!</li>
             <li class="fragment">JSON can be read by all sorts of backend platforms and databases.</li>
         </ul>
         <aside class="notes"></aside>
-    </section>
+      </div>
 
-    <!-- Slide 6 -->
-    <section>
+      <div class="slide">
         <h2>
-            How does JSON work?
+          How does JSON work?
         </h2>
-        <ul>
-            <li class="fragment">Using Key/Value pairs</li>
-            <li class="fragment">Keys must be stored with quotes (unlike JS Objects)</li>
-            <li class="fragment">Value can be the following data types: Number, String, Boolean, Array, Object, null</li>
-            <li class="fragment">Resembles objects in JS</li>
+        <ul class="incremental">
+          <li class="fragment">Using Key/Value pairs</li>
+          <li class="fragment">Keys must be stored with quotes (unlike JS Objects)</li>
+          <li class="fragment">Value can be the following data types: Number, String, Boolean, Array, Object, null</li>
+          <li class="fragment">Resembles objects in JS</li>
         </ul>
         <aside class="notes"></aside>
-    </section> 
+      </div>
 
-    <!-- Slide 7 -->  
-    <section>
+      <div class="slide">
         <h2>Example</h2>
         <pre><code class="hljs" data-trim contenteditable>
 {
-"firstName": "Gene", 
-"lastName": "Smith", 
-"address": { 
-"streetAddress": "425 2nd Street", 
-"city": "San Francisco", 
-"state": "CA", 
-"postalCode": 94107 
-}, 
-"phoneNumbers": [ 
-"212 732-1234", 
-"646 123-4567" ] 
-} 
-        </code></pre>
+  "firstName": "Gene",
+  "lastName": "Smith",
+  "address": {
+    "streetAddress": "425 2nd Street",
+    "city": "San Francisco",
+    "state": "CA",
+    "postalCode": 94107
+  },
+  "phoneNumbers": [
+    "212 732-1234",
+    "646 123-4567"
+  ]
+}
+</code></pre>
         <aside class="notes"></aside>
-      </section> 
-            
-    <section>
+      </div>
+
+      <div class="slide">
         <h2>JSON Identification</h2>
         <p>Your product manager provided you the following UI design. How would you create a JSON from this page?</p>
         <img width=600 src="images/json-exercise.jpg" alt="JSON Exercise">
-        <br>
-    </section>
+      </div>
 
-    <!-- Slide 9 -->        
-    <section>
+      <div class="slide">
         <h2>
-            How is data sent over the internet?
+          How is data sent over the internet?
         </h2>
         <p>
-           GET and POST Requests
+          GET and POST Requests
         </p>
         <img data-enlargable style="height: 400px; border: 5px solid blue; cursor: zoom-in;" src="images/Rest-API.png" alt="Get and Post Requests">
         <aside class="notes">Remind folks about GET and POST requests.</aside>
-    </section> 
+      </div>
 
-    <section>
+      <div class="slide">
         <h2>Let's make a GET request for some JSON</h2>
-        <p class="fragment">Your browser will automatically make a GET request, and this particular response will be JSON. This is very common for when you are making API calls to get data.</p>
-        <p class="fragment"><a href="https://cat-fact.herokuapp.com/facts" target="_blank">Click here</a> for an example.</p>
+        <p class="fragment incremental">Your browser will automatically make a GET request, and this particular response will be JSON. This is very common for when you are making API calls to get data.</p>
+        <p class="fragment incremental"><a href="https://cat-fact.herokuapp.com/facts" target="_blank">Click here</a> for an example.</p>
         <aside class="notes">URL is displaying data structure from an API call to the browser.</aside>
-    </section>
+      </div>
 
-    <section>
+      <div class="slide">
         <h2>Let's add a JSON Formatter</h2>
         <p>The GET request on the prior slide yields JSON in raw form.</p>
         <p>To make the JSON more readable, we will need to parse it.</p>
-        <p class="fragment"><a href="https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa" target="_blank">Click here</a> to add JSON Formatter,<br>an extension from the Chrome Web Store.</p>
-        <p class="fragment">Then click between Raw and Parsed. Notice what happens!</p>
-    </section>
+        <p class="fragment incremental"><a href="https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa" target="_blank">Click here</a> to add JSON Formatter,<br>an extension from the Chrome Web Store.</p>
+        <p class="fragment incremental">Then click between Raw and Parsed. Notice what happens!</p>
+      </div>
 
-    <section>
+      <div class="slide">
         <h2>When do we make GET and POST requests?</h2>
-        <ul>
-            <li class="fragment">When we go to a website (GET)</li>
-            <li class="fragment">When we login or sign up for a web app (POST)</li>
-            <li class="fragment">When we search for items in an online store (GET)</li>
-            <li class="fragment">When we submit a post to a social media site (POST)</li>
-            <li class="fragment">When we submit a form (POST)</li>
+        <ul class="incremental">
+          <li class="fragment">When we go to a website (GET)</li>
+          <li class="fragment">When we login or sign up for a web app (POST)</li>
+          <li class="fragment">When we search for items in an online store (GET)</li>
+          <li class="fragment">When we submit a post to a social media site (POST)</li>
+          <li class="fragment">When we submit a form (POST)</li>
         </ul>
-    </section>
+      </div>
 
-    <section>
+      <div class="slide">
         <h2>Web Apps</h2>
         <p>Web apps can be set up to make many, many GET and POST requests for almost any user action.</p>
         <p>Frontend developers send those requests and receive the responses.</p>
         <p>Frontend developers also determine WHEN a request is sent and how it is handled by the UI.</p>
-    </section>
-  
+      </div>
 
-    <!-- Slide 10 -->
-    <section>
+      <div class="slide">
         <h2>
-            What does asynchronous mean?
+          What does asynchronous mean?
         </h2>
         <p>
-           <span style="color: yellow;">Asynchronous</span> technologies enable users to access information or communicate at different points of time, usually at the time of choice of the user.
+          <span style="color: yellow;">Asynchronous</span> technologies enable users to access information or communicate at different points of time, usually at the time of choice of the user.
         </p>
         <aside class="notes"></aside>
-    </section> 
+      </div>
+ 
 
-    <!-- <section>
+      <!--
+      <div class="slide">
         <h2>Asynchronous Analogy</h2>
         <p>A bank teller that only serves one person can only serve that one person at a time</p>
         <p>VERSUS</p>
         <p>Multiple tellers who can see multiple people but all access the same back room.</p>
-    </section> -->
+      </div>
+      -->
 
-    <!-- Slide 11 -->
-    <section>
+      <div class="slide">
         <h2>Web Apps - The Old Way</h2>
         <p>
-           A traditional data-driven web application is written so that it:
+          A traditional data-driven web application is written so that it:
         </p>
-        <ol>
-            <li class="fragment">Displays a webpage</li>
-            <li class="fragment">Waits for user interaction</li>
-            <li class="fragment">Asks the server for data</li>
-            <li class="fragment">Reloads the webpage</li>
+        <ol class="incremental">
+          <li class="fragment">Displays a webpage</li>
+          <li class="fragment">Waits for user interaction</li>
+          <li class="fragment">Asks the server for data</li>
+          <li class="fragment">Reloads the webpage</li>
         </ol>
-        <p class="fragment">This process has a negative effect....</p>
+        <p class="fragment incremental">This process has a negative effect....</p>
         <aside class="notes"></aside>
-    </section> 
-    
-    <!-- Slide 12 -->
-    <section>
+      </div>
+
+      <div class="slide">
         <h2>
-            Sad Users
+          Sad Users
         </h2>
         <p>
-           As a result, the user has "<span style="color: yellow;">down time</span>" - a period of time where the users can't interact with the webpage at all.
+          As a result, the user has "<span style="color: yellow;">down time</span>" - a period of time where the users can't interact with the webpage at all.
         </p>
         <img data-enlargable style="height: 400px; border: 5px solid blue; cursor: zoom-in;" src="images/smiley_sad-512.png">
         <aside class="notes"></aside>
-    </section> 
-  
-   
+      </div>
 
-    <!-- Slide 19 -->
-    <section>
+      <div class="slide">
         <h2>
-            Importance of Async for Web 2.0 Programming
+          Importance of Async for Web 2.0 Programming
         </h2>
-        <ul>
-            <li class="fragment">No down time!</li>
-            <li class="fragment">The user can still interact with other parts of the page while one part is loading.</li>
-            <li class="fragment"> The user can selectively load the content they're interested in.</li>
-            <li class="fragment">This is arguably the most important part of Web 2.0 programming!</li>
+        <ul class="incremental">
+          <li class="fragment">No down time!</li>
+          <li class="fragment">The user can still interact with other parts of the page while one part is loading.</li>
+          <li class="fragment"> The user can selectively load the content they're interested in.</li>
+          <li class="fragment">This is arguably the most important part of Web 2.0 programming!</li>
         </ul>
         <aside class="notes"></aside>
-    </section> 
-    
-    <!-- Slide 20 -->
+      </div>
 
-
-    <!-- Slide 21 -->
-    <section>
+      <div class="slide">
         <h2>
-            Requests and Responses
+          Requests and Responses
         </h2>
         <img data-enlargable style="height: 300px; border: 5px solid blue; cursor: zoom-in;" src="images/2.jpg">
         <aside class="notes">Takeaway: Every Request has a Response.</aside>
-    </section> 
-    
-    <!-- Slide 22 -->
-    <section>
+      </div>
+
+      <div class="slide">
         <h2>
-            Requests and Responses
+          Requests and Responses
         </h2>
-        <ul>
-            <li class="fragment"><strong>Front-End: </strong>Hey, Back-End! Here are my credentials. Can I get some data? How about books on APIs?</li>
-            <li class="fragment"><strong>Back-End </strong><em>thinks about it, decides how to handle request...looks in database, searches...</em></li>
-            <li class="fragment"><strong>Back-End: </strong>200 OK, here are some books on APIs!</li>
-            <li class="fragment"><strong>Front-End: </strong>Thanks! I'm going to make an online bookshelf with the data!</li>
+        <ul class="incremental">
+          <li class="fragment"><strong>Front-End: </strong>Hey, Back-End! Here are my credentials. Can I get some data? How about books on APIs?</li>
+          <li class="fragment"><strong>Back-End </strong><em>thinks about it, decides how to handle request...looks in database, searches...</em></li>
+          <li class="fragment"><strong>Back-End: </strong>200 OK, here are some books on APIs!</li>
+          <li class="fragment"><strong>Front-End: </strong>Thanks! I'm going to make an online bookshelf with the data!</li>
         </ul>
         <aside class="notes"></aside>
-    </section> 
+      </div>
 
-    
-    <!-- Slide 23 -->
-    <section>
+      <div class="slide">
         <h2>
-            How does this communication take place?
+          How does this communication take place?
         </h2>
-        <p class="fragment">There are different methods for making async requests, and new ones are being added all the time.</p>
-        <p class="fragment">We will talk about a tool that is built into JavaScript, called <span style="color: yellow;">Fetch</span>.</p>
+        <p class="fragment incremental">There are different methods for making async requests, and new ones are being added all the time.</p>
+        <p class="fragment incremental">We will talk about a tool that is built into JavaScript, called <span style="color: yellow;">Fetch</span>.</p>
         <aside class="notes"></aside>
-    </section> 
+      </div>
 
-    <!-- Slide 13 -->
-    <!-- <section>
+      <!--
+      <div class="slide">
         <h2>
-            (Previously) AJAX
+          (Previously) AJAX
         </h2>
         <p><span style="color: yellow;">AJAX</span> = "<span style="color: yellow;">A</span>synchronous <span style="color: yellow;">J</span>avaScript <span style="color: yellow;">a</span>nd <span style="color: yellow;">X</span>ML."</p>
-        <ul>
-            <li class="fragment">AJAX was a tool most commonly used with jQuery to make Asynchronous GET and POST requests.</li>
-            <li class="fragment">AJAX is not really used much anymore as a technology.</li>
+        <ul class="incremental">
+          <li class="fragment">AJAX was a tool most commonly used with jQuery to make Asynchronous GET and POST requests.</li>
+          <li class="fragment">AJAX is not really used much anymore as a technology.</li>
         </ul>
         <aside class="notes"></aside>
-    </section> 
-     -->
-    <!-- Slide 14 -->
-    <section>
+      </div>
+      -->
+
+      <div class="slide">
         <h2>
-            Fetch
+          Fetch
         </h2>
-        <ul>
-            <li class="fragment"><span style="color: yellow;">Fetch</span> allows for asynchronous data transfer between a webpage and a web server/API.</li>
-            <li class="fragment">JavaScript tells the browser to retrieve or send data from a particular URL and send the response back to the webpage.</li>
+        <ul class="incremental">
+          <li class="fragment"><span style="color: yellow;">Fetch</span> allows for asynchronous data transfer between a webpage and a web server/API.</li>
+          <li class="fragment">JavaScript tells the browser to retrieve or send data from a particular URL and send the response back to the webpage.</li>
         </ul>
         <aside class="notes"></aside>
-    </section> 
-    
-   <!-- Slide 15 -->
-   <section>
+      </div>
+
+      <div class="slide">
         <h2>
-            Let's talk about this diagram
+          Let's talk about this diagram
         </h2>
         <img style="height: 550px;" src="images/Screen Shot 2020-06-11 at 10.39.14 AM.png" alt="Diagram of Client and Backend Communication">
         <aside class="notes"></aside>
-    </section> 
-    
-    <!-- Slide 24 -->
-    <!-- <section>
+      </div>
+
+      <!--
+      <div class="slide">
         <h2>
-            XMLHttpRequest
+          XMLHttpRequest
         </h2>
         <p>
            XMLHttpRequest (XHR) is an API (we will cover these next) available to web browser scripting languages such as JavaScript. It is used to send HTTP or HTTPS requests to a web server and load the server response data back into the script.
         </p>
-        <ul>
-            <li class="fragment">Don't worry about the XML part</li>
-            <li class="fragment">We can just use HTML or JSON!</li>
-            <li class="fragment"><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">Click here to learn more</a></li>
+        <ul class="incremental">
+          <li class="fragment">Don't worry about the XML part</li>
+          <li class="fragment">We can just use HTML or JSON!</li>
+          <li class="fragment"><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">Click here to learn more</a></li>
         </ul>
         <aside class="notes"></aside>
-    </section> 
-    
-    <section>
+      </div>
+      -->
+
+      <!--
+      <div class="slide">
         <h2>
-            Anatomy of an XMLHttpRequest
+          Anatomy of an XMLHttpRequest
         </h2>
         <pre><code class="hljs" data-trim contenteditable>
 // instantiate a new request
@@ -903,97 +861,108 @@ console.log(JSON.parse(request.responseText));
 request.open('get', '/path/to/api', true);
 request.setRequestHeader('Content-type', 'application/json');
 request.send();
-        </code></pre>
+</code></pre>
         <aside class="notes"></aside>
-    </section> 
-    
-    <section>
+      </div>
+      -->
+
+      <!--
+      <div class="slide">
         <h2>
-            BUT! We don't need to write all that code...
+          BUT! We don't need to write all that code...
         </h2>
         <aside class="notes"></aside>
-    </section> 
-    
-    <section>
+      </div>
+      -->
+
+      <!--
+      <div class="slide">
         <h2>
-            jQuery and AJAX
+          jQuery and AJAX
         </h2>
         <p>
            We can use the jQuery $.<a href="http://api.jquery.com/jQuery.ajax/">ajax</a> function.</p>
         </p>
          <pre><code class="hljs" data-trim contenteditable>
-$.ajax({type: "GET",
-url: "filename.json",
-dataType: "json",
-success: function(data) { },
-error: function(xhr, status, e) { }
+$.ajax({
+  type: "GET",
+  url: "filename.json",
+  dataType: "json",
+  success: function(data) {},
+  error: function(xhr, status, e) {}
 });    
-        </code></pre>
+</code></pre>
         <aside class="notes"></aside>
-    </section> 
-    
-    <section>
+      </div>
+      -->
+
+      <!--
+      <div class="slide">
         <h2>
-            Using jQuery for everything
+          Using jQuery for everything
         </h2>
         <pre><code class="hljs" data-trim contenteditable>
-$.ajax({type: "GET",
-url: "books.json",
-dataType: "json",
-success: function(books) { 
-for (var i = 0; i < books.length; i++) { 
-  var book = books[i];
-  var p = $('&lt;p&gt;');
-  p.html(book.title + ' by ' + book.author);
-  $('body').append(p);
-}
-},
-error: function(xhr, status, e) {
-console.log(status, e);
-}
+$.ajax({
+  type: "GET",
+  url: "books.json",
+  dataType: "json",
+  success: function(books) {
+    for (var i = 0; i < books.length; i++) {
+      var book = books[i];
+      var p = $('&lt;p&gt;');
+      p.html(book.title + ' by ' + book.author);
+      $('body').append(p);
+    }
+  },
+  error: function(xhr, status, e) {
+    console.log(status, e);
+  }
 });
-        </code></pre>
+</code></pre>
         <aside class="notes"></aside>
-    </section> 
-    
-    <section>
+      </div>
+      -->
+
+      <!--
+      <div class="slide">
         <h2>
-            Remember!
+          Remember!
         </h2>
         <p>
-           jQuery is just a library, written by human beings. Use it because it saves you time, but don't rely too hard on it!
+          jQuery is just a library, written by human beings. Use it because it saves you time, but don't rely too hard on it!
         </p>
         <aside class="notes"></aside>
-    </section> 
+      </div>
+      -->
 
-    <section>
+      <!--
+      <div class="slide">
         <h2>
-            Debugging AJAX Requests
+          Debugging AJAX Requests
         </h2>
-        <ul>
-            <li class="fragment">Open the Dev Tools and go to Network. Select "XHR" filter to see all XMLHttpRequests made.</li>
-            <li class="fragment">Refresh the page</li>
-            <li class="fragment">See what the request responded with by clicking one of the elements and then its "Response" tab.</li>
-            <li class="fragment">Explore this tab! It will teach you so much about what's in requests and responses. (Google everything you don't understand.)</li>
-            <li class="fragment">Visit <a href="https://www.airbnb.com/wishlists/popular" target="_blank">this link</a> again.</li>
+        <ul class="incremental">
+          <li class="fragment">Open the Dev Tools and go to Network. Select "XHR" filter to see all XMLHttpRequests made.</li>
+          <li class="fragment">Refresh the page</li>
+          <li class="fragment">See what the request responded with by clicking one of the elements and then its "Response" tab.</li>
+          <li class="fragment">Explore this tab! It will teach you so much about what's in requests and responses. (Google everything you don't understand.)</li>
+          <li class="fragment">Visit <a href="https://www.airbnb.com/wishlists/popular" target="_blank">this link</a> again.</li>
         </ul>
         <aside class="notes"></aside>
-    </section> 
-     -->
-    <!-- Slide 31 -->
-    <section>
+      </div>
+      -->
+
+      <div class="slide">
         <h2>Server Status Responses</h2>
         <img src="images/statuscode1.png" alt="Server Status Codes">
-    </section>
+      </div>
 
-    <!-- Slide 32 -->
-    <section>
+      <div class="slide">
         <h2>
-            Fetch
+          Fetch
         </h2>
         <p>The <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch" target="_blank">Fetch API</a> allows JS to access and manipulate the HTTP pipeline, such as requests and responses, using <code style="color: aqua;">fetch()</code>.</p>
         <p>
-           Let's take a look at "<code style="color: aqua;">GET</code>" and "<code style="color: aqua;">POST</code>"
+          Let's take a look at "<code style="color: aqua;">GET</code>" and "<code style="color: aqua;">POST</code>"
         </p>
         <pre><code class="hljs" data-trim contenteditable>
 //GET
@@ -1009,13 +978,13 @@ fetch('http://example.com/movies.json', {
 })
 .then(response => response.json())
 .then(data => console.log(data));
-        </code></pre>
+</code></pre>
         <aside class="notes"></aside>
-    </section> 
+      </div>
 
-    <section>
+      <div class="slide">
         <h2>Fetch for GET and POST Requests</h2>
-<pre><code class="hljs" data-trim contenteditable>
+        <pre><code class="hljs" data-trim contenteditable>
 //GET
 fetch('http://example.com/movies.json')
 
@@ -1026,28 +995,27 @@ fetch('http://example.com/movies.json', {
   body: JSON.stringify(data) 
 })
 </code></pre>
-        <p class="fragment">Notice that both requests have a <span style="color: aqua;">url string</span> as a parameter.</p>
-        <p class="fragment">The <span style="color: aqua;">POST</span> request has an additional parameter: an <span style="color: aqua;">object</span>.<br>
-        <span class="fragment">The object in the <span style="color: aqua;">POST</span> request has 2 properties:</span></p>
-        <ul>
-            <li class="fragment"><code style="color: aqua;">method</code>, which must have a value of <span style="color: aqua;">'POST'</span></li>
-            <li class="fragment"><code style="color: aqua;">body</code>, which must utilize the <span style="color: aqua;">JSON.stringify()</span> method.
-            <!-- <ul>
-                <li class="fragment">The <span style="color: aqua;">data</span> to be posted must be passed into <span style="color: aqua;">JSON.stringify()</span> to become a JSON string.</li>
-            </ul> -->
+        <p class="fragment incremental">Notice that both requests have a <span style="color: aqua;">url string</span> as a parameter.</p>
+        <p class="fragment incremental">The <span style="color: aqua;">POST</span> request has an additional parameter: an <span style="color: aqua;">object</span>.<br>
+        <span class="fragment incremental">The object in the <span style="color: aqua;">POST</span> request has 2 properties:</span></p>
+        <ul class="incremental">
+          <li class="fragment"><code style="color: aqua;">method</code>, which must have a value of <span style="color: aqua;">'POST'</span></li>
+          <li class="fragment"><code style="color: aqua;">body</code>, which must utilize the <span style="color: aqua;">JSON.stringify()</span> method.
+        <!--
+          <ul class="incremental">
+            <li class="fragment">The <span style="color: aqua;">data</span> to be posted must be passed into <span style="color: aqua;">JSON.stringify()</span> to become a JSON string.</li>
+          </ul>
+        -->
         </li>
         </ul>
-    </section>
+      </div>
 
-    <section>
+      <div class="slide">
         <h2>
-            Fetch first, then what?
+          Fetch first, then what?
         </h2>
-        <p>When using <code style="color: aqua;">fetch()</code>, expect a <code style="color: aqua;">response</code> and <code style="color: aqua;">data</code>.
-        <br>
-            <span class="fragment">Let's look at "<code style="color: aqua;">GET</code>" and "<code style="color: aqua;">POST</code>" again.</span>
-         </p>
-        <pre class="fragment"><code class="hljs" data-trim contenteditable>
+        <p>When using <code style="color: aqua;">fetch()</code>, expect a <code style="color: aqua;">response</code> and <code style="color: aqua;">data</code>.<br><span class="fragment">Let's look at "<code style="color: aqua;">GET</code>" and "<code style="color: aqua;">POST</code>" again.</span></p>
+        <pre><code class="hljs" data-trim contenteditable>
 //GET
 fetch('http://example.com/movies.json')
 .then(response => response.json())
@@ -1061,101 +1029,101 @@ fetch('http://example.com/movies.json', {
 })
 .then(response => response.json())
 .then(data => console.log(data));
-        </code></pre>
-        <p class="fragment">Notice we can use method chaining and apply <code style="color: aqua;">.then()</code> right after we use the <code style="color: aqua;">fetch()</code> method.</p>
+</code></pre>
+        <p class="fragment incremental">Notice we can use method chaining and apply <code style="color: aqua;">.then()</code> right after we use the <code style="color: aqua;">fetch()</code> method.</p>
         <aside class="notes"></aside>
-    </section>
+      </div>
 
-    <!-- <section>
+      <!--
+      <div class="slide">
         <h2>understanding .then()</h2>
-<pre><code class="hljs" data-trim contenteditable>
+        <pre><code class="hljs" data-trim contenteditable>
 doSomething()
 .then(function(result) {
-return doSomethingElse(result);
+  return doSomethingElse(result);
 })
 .then(function(newResult) {
-return doThirdThing(newResult);
+  return doThirdThing(newResult);
 })
 .then(function(finalResult) {
-console.log('Got the final result: ' + finalResult);
+  console.log('Got the final result: ' + finalResult);
 })
 .catch(failureCallback);
 </code></pre>
-        <p class="fragment">After a <code style="color: aqua;">fetch()</code>, an app can have as many <code style="color: aqua;">.then()</code> methods as applicable.</p>
-        <p class="fragment">A <code style="color: aqua;">.catch()</code> method is used to catch errors.</p>
-    </section>
+        <p class="fragment incremental">After a <code style="color: aqua;">fetch()</code>, an app can have as many <code style="color: aqua;">.then()</code> methods as applicable.</p>
+        <p class="fragment incremental">A <code style="color: aqua;">.catch()</code> method is used to catch errors.</p>
+      </div>
+      -->
 
-    <section>
+      <!--
+      <div class="slide">
         <h2>understanding .then() with arrow functions</h2>
-<pre><code class="hljs" data-trim contenteditable>
+        <pre><code class="hljs" data-trim contenteditable>
 doSomething()
 .then(result => {
-return doSomethingElse(result);
+  return doSomethingElse(result);
 })
 .then(newResult => {
-return doThirdThing(newResult);
+  return doThirdThing(newResult);
 })
 .then(finalResult => {
-console.log('Got the final result: ' + finalResult);
+  console.log('Got the final result: ' + finalResult);
 })
 .catch(failureCallback);
 </code></pre>
-    </section> -->
+      </div>
+      -->
 
-    
-    <!-- Slide 33 -->
-    <!-- <section>
+      <!--
+      <div class="slide">
         <h2>
-            Cross Domain Policy
+          Cross Domain Policy
         </h2>
-        <ul>
-            <li class="fragment">The same-origin policy restricts how a document or script loaded from one origin can interact with a resource from another origin. </li>
-            <li class="fragment">It is a critical security mechanism for isolating potentially malicious documents.</li>
-            <li class="fragment">Two pages have the same origin if the protocol, port (if one is specified), and host are the same for both pages. The following table gives examples of origin comparisons:</li>
+        <ul class="incremental">
+          <li class="fragment">The same-origin policy restricts how a document or script loaded from one origin can interact with a resource from another origin. </li>
+          <li class="fragment">It is a critical security mechanism for isolating potentially malicious documents.</li>
+          <li class="fragment">Two pages have the same origin if the protocol, port (if one is specified), and host are the same for both pages. The following table gives examples of origin comparisons:</li>
         </ul>
         <aside class="notes"></aside>
-    </section>  -->
+      </div>
+      -->
 
-    <!-- Slide 34 -->
-    <!-- <section>
+      <!--
+      <div class="slide">
         <h2>
-            Cross Domain Policy
+          Cross Domain Policy
         </h2>
         <p>
-           For http://store.company.com/dir/page.html:
+          For http://store.company.com/dir/page.html:
         </p>
         <img src="images/cross_domain_policy.png">
         <aside class="notes"></aside>
-    </section>  -->
-    
-    <!-- Slide 35 -->
-    <section>
+      </div>
+      -->
+
+      <div class="slide">
         <h2>More Fetch Examples</h2>
         <p>Let's walk through <a href="https://css-tricks.com/using-fetch/" target="_blank">this example</a></p>
         <aside class="notes">a fetch() can have as many .then()s as applicable, followed by a .catch() - first .then() is convert json; second .then() is to format the data. </aside>
-    </section> 
-    
-    <!-- Slide 36 -->
-    <section>
+      </div>
+
+      <div class="slide">
         <h2>
-            Exercise using an API
+          Exercise using an API
         </h2>
-        <p> We will check out this example using the Cat Facts API<br>
-           <a href="https://codepen.io/LHack/pen/eYJZBPj" target="_blank">Click here</a>
-        </p>
+        <p> We will check out this example using the Cat Facts API<br><a href="https://codepen.io/LHack/pen/eYJZBPj" target="_blank">Click here</a></p>
         <aside class="notes"></aside>
-    </section> 
-    
-    <section>
+      </div>
+
+      <div class="slide">
         <h2>
-            Let's display the data!
+          Let's display the data!
         </h2>
         <pre><code class="hljs" data-trim contenteditable>
 document.addEventListener("click", function() {
-
   let text = document.getElementById("paragraph-text")
   text.textContent = 'loading . . .'
-  
+
   fetch('https://cat-fact.herokuapp.com/facts')
   .then(response => response.json())
   .then(data =>   
@@ -1164,88 +1132,87 @@ document.addEventListener("click", function() {
     }
   );
 });
-        </code></pre>
+</code></pre>
         <aside class="notes"></aside>
-    </section> 
-        
-    <section>
+      </div>
+
+      <div class="slide">
         <h2>
-            Another Fetch GET exercise
+          Another Fetch GET exercise
         </h2>
         <p>Hint: Take a look at the structure of the JSON data to complete the exercise.</p>
-        <p>
-           <a href="https://codepen.io/LHack/pen/KKVzWKj" target="_blank">Click here</a>
-        </p>
-    </section> 
+        <p><a href="https://codepen.io/LHack/pen/KKVzWKj" target="_blank">Click here</a></p>
+      </div>
 
-
-    
-
-
-    <section>
+      <div class="slide">
         <h2>How JS Works!</h2>
         <p><a href="https://www.youtube.com/watch?v=8aGhZQkoFbQ" target="_blank">The Event Loop</a></p>
         <aside class="notes">This video can have a lot of tech language. After watching the video, we'll recap on the takeaways.</aside>
-    </section>
+      </div>
 
-    <section>
+      <div class="slide">
         <h2>Great Resources</h2>
-        <p><a href="https://scotch.io/courses/10-need-to-know-javascript-concepts/callbacks-promises-and-async" target="_blank">Callbacks
-                and Async - Oh My!</a></p>
+        <p><a href="https://scotch.io/courses/10-need-to-know-javascript-concepts/callbacks-promises-and-async" target="_blank">Callbacks and Async - Oh My!</a></p>
         <p><a href="https://developers.google.com/web/fundamentals/" target="_blank">Web Fundamentals</a></p>
-    </section>
+      </div>
 
-
-    <!-- <section>
+      <!--
+      <div class="slide">
         <h2>Another Way to Be Async in JS</h2>
         <p>Instead of .then()</p>
-<pre><code class="hljs" data-trim contenteditable>
+        <pre><code class="hljs" data-trim contenteditable>
 function getLyrics() {
-fetch('https://api.lyrics.ovh/v1/coldplay/42')
-.then(response => response.json())
-.then(data => console.log(data));
+  fetch('https://api.lyrics.ovh/v1/coldplay/42')
+  .then(response => response.json())
+  .then(data => console.log(data));
 });
-}
 </code></pre>
         <p>Async/Await</p>
-<pre class="fragment"><code class="hljs" data-trim contenteditable>//async/await refactor
+        <pre><code class="hljs" data-trim contenteditable>
+//async/await refactor
 async function getLyrics() {
-let response = await fetch('https://api.lyrics.ovh/v1/coldplay/42');
-let lyrics = await response.json();
-console.log(lyrics);
+  let response = await fetch('https://api.lyrics.ovh/v1/coldplay/42');
+  let lyrics = await response.json();
+  console.log(lyrics);
 }
-</code></pre> -->
-        <!-- <ul>
-            <li><a href="https://javascript.info/async-await" target="_blank">Make our async JS work the way we want it to</a></li>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function" target="_blank">No longer need to chain promises together (.then())</a></li>
-        </ul> -->
-    </section>
+</code></pre>
+        <ul>
+          <li><a href="https://javascript.info/async-await" target="_blank">Make our async JS work the way we want it to</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function" target="_blank">No longer need to chain promises together (.then())</a></li>
+        </ul>
+      </div>
+      -->
 
-    <!-- <section>
+      <!--
+      <div class="slide">
         <h2>Why Use Async/Await?</h2>
         <ul>
-            <li>Makes your code easier to read, because it avoids method chaining with <code class="aqua">.then()</code>.</li>
-            <li>Allows you to handle data in a <span class="yellow">sequential</span> way.
-                <ul>
-                    <li>Example: You can call one database to get a user's movie preferences <i>first</i>  before calling a database to get the movie's posters.</li>
-                </ul></li>
-            <li><code class="aqua">await</code> allows you to write these data calls in order.</li>
+          <li>Makes your code easier to read, because it avoids method chaining with <code class="aqua">.then()</code>.</li>
+          <li>Allows you to handle data in a <span class="yellow">sequential</span> way.
+            <ul>
+              <li>Example: You can call one database to get a user's movie preferences <i>first</i> before calling a database to get the movie's posters.</li>
+            </ul>
+          </li>
+          <li><code class="aqua">await</code> allows you to write these data calls in order.</li>
         </ul>
         <p>Learn how to implement async/await. Read <a href="https://css-tricks.com/understanding-async-await/" target="_blank">here</a>.</p>
         <aside class="notes">For article, read only up to first code block.</aside>
-    </section>
+      </div>
+      -->
 
-    <section>
+      <!--
+      <div class="slide">
         <h2>Use Async/Await for Cat Facts</h2>
         <p>We have used <code style="color: aqua">fetch()</code> to get data using the Cat Facts API.</p>
-        <p><a href="https://codepen.io/codexmon/pen/BaLqrJP?editors=0011" target="_blank">Click here</a> to refactor using <code style="color: aqua">async</code>/<code style="color: aqua">await</code>.
-        </p>
-        <!-- <p>Feel free to reference the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function" target="_blank">MDN documentation</a></p>
+        <p><a href="https://codepen.io/codexmon/pen/BaLqrJP?editors=0011" target="_blank">Click here</a> to refactor using <code style="color: aqua">async</code>/<code style="color: aqua">await</code>.</p>
+        <p>Feel free to reference the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function" target="_blank">MDN documentation</a></p>
         <aside class="notes"></aside>
         <img src="https://media.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.gif" alt="Cat with black rimmed glasses typing at a computer">
-    </section> 
+      </div>
+      -->
 
-    <section>
+      <!--
+      <div class="slide">
         <h2>Async/Await using Numbers API</h2>
         <p>Ask a user for a number, then make an API call to fetch and then display a trivia fact about that number to the user.</p>
         <p><a href="https://github.com/AnnieCannons/ac-intro-to-ajax/tree/master/images/numbers-api.zip" target="_blank">Click here</a> for the instructions and links to resources to help you use <code style="color: aqua">async</code>/<code style="color: aqua">await</code>.
@@ -1253,156 +1220,118 @@ console.log(lyrics);
         <a href="https://trello.com/b/RQrD5Ye2" target="_blank"><img width="300" src="images/trello-logo-blue.png" alt="Trello logo"></a>
         <img src="images/exercise.gif" alt="Exercise Time">
         <aside class="notes"></aside>
-    </section>
+      </div>
+      -->
 
-    <section>
+      <!--
+      <div class="slide">
         <h2>More on Async/Await</h2>
-        <p>Watch these <a href="https://docs.google.com/document/d/1uzAOfnqKt_tnuI7kWHu5Sc_jMtlzuP1EeMmN0enhSuY/edit#heading=h.o8hu4wbfomqd" target="_blank">Asynchronous JavaScript videos</a>.</p> -->
-        <!-- <a href="https://trello.com/b/RQrD5Ye2" target="_blank"><img width="300" src="images/trello-logo-blue.png" alt="Trello logo"></a>
-        <img src="images/exercise.gif" alt="Exercise Time"> -->
-    </section>
-    
-    <!-- Slide 36 -->
-    <!-- <section>
+        <p>Watch these <a href="https://docs.google.com/document/d/1uzAOfnqKt_tnuI7kWHu5Sc_jMtlzuP1EeMmN0enhSuY/edit#heading=h.o8hu4wbfomqd" target="_blank">Asynchronous JavaScript videos</a>.</p>
+        <a href="https://trello.com/b/RQrD5Ye2" target="_blank"><img width="300" src="images/trello-logo-blue.png" alt="Trello logo"></a>
+        <img src="images/exercise.gif" alt="Exercise Time">
+      </div>
+      -->
+
+      <!--
+      <div class="slide">
         <h2>
-            List of additional key concepts
+          List of additional key concepts
         </h2>
-        <ul>
-            <li class="fragment">What are the parts of an HTTP request?</li>
-            <li class="fragment">What does CRUD stand for?</li>
-            <li class="fragment">What is the same origin policy?</li>
-            <li class="fragment">What are the 4 basic CRUD operations and methods?</li>
-            <li class="fragment">What is the difference between JSONP and JSON?</li>
+        <ul class="incremental">
+          <li class="fragment">What are the parts of an HTTP request?</li>
+          <li class="fragment">What does CRUD stand for?</li>
+          <li class="fragment">What is the same origin policy?</li>
+          <li class="fragment">What are the 4 basic CRUD operations and methods?</li>
+          <li class="fragment">What is the difference between JSONP and JSON?</li>
         </ul>
         <aside class="notes"></aside>
-    </section> -->
+      </div>
+      -->
 
-    <!-- End Slide -->
-
-    <!-- <section>
+      <!--
+      <div class="slide">
         <h2>Async and JSON Roundup</h2>
         <p>Click <a href="https://docs.google.com/document/d/1V-CFUTMkB3Kd5B0V4gQPYAf1cRJDnvGejizT844Vq1s/edit?usp=sharing" target="_blank">here</a> to review.</p>
-    </section> -->
+      </div>
+      -->
 
-    <!-- <section>
+      <!--
+      <div class="slide">
         <h2>Async and JSON Overview</h2>
         <ul>
-            <li class="green">Review HTML and JS's Relationship</li>
-            <li class="green">JSON</li>
-            <li class="green">Async</li>
-            <li class="green">Async/Await</li>
+          <li class="green">Review HTML and JS's Relationship</li>
+          <li class="green">JSON</li>
+          <li class="green">Async</li>
+          <li class="green">Async/Await</li>
         </ul>
-    </section> -->
-
-        <section>
-          <h2>Marvel API Key Exercise</h2>
-          <p>
-            Ask a user for a character name, then make an API call to fetch and
-            then display the character's thumbnail, name, and description to the
-            user.
-          </p>
-          <p>
-            <a
-              href="https://docs.google.com/document/d/1DGGzSVDqqoes5M5rTxVd9n6d_aP25An8X0YMudwBfAg/edit?usp=sharing"
-              target="_blank"
-              >Click here</a
-            >
-            for the instructions and links to resources to help you sign up for
-            an API key, use <code style="color: aqua">fetch()</code>.
-          </p>
-
-          <aside class="notes"></aside>
-        </section>
-
-        <!-- <section>
-            <h2>Courses in Pluralsight</h2>
-            <p><a href="https://app.pluralsight.com/library/courses/creating-web-apis-developers-love/table-of-contents" target="_blank">Build your own API</a></p>
-            <p><a href="https://app.pluralsight.com/library/courses/google-maps-api-get-started/table-of-contents" target="_blank">Use Google Maps API</a></p>
-        </section>
-         -->
-        <section>
-          <h2>More on Web APIs</h2>
-          <p>
-            Watch these
-            <a
-              href="https://docs.google.com/document/d/1uzAOfnqKt_tnuI7kWHu5Sc_jMtlzuP1EeMmN0enhSuY/edit#heading=h.xqz064e2bzsd"
-              target="_blank"
-              >Web API videos</a
-            >.
-          </p>
-          <!-- <a href="https://trello.com/b/RQrD5Ye2/" target="_blank"><img width="300" src="img/trello-logo-blue.png" alt="Trello logo"></a>
-            <img src="img/exercise.gif" alt="Exercise Time"> -->
-        </section>
-
-        <!-- <section>
-            <h2>Introduction to APIs Roundup</h2>
-            <p>Click <a href="https://docs.google.com/document/d/1tIE4zPw2t7e8kxJknyILRCoM8VY5xXjaZ7Dpl9jjtdg/edit?usp=sharing" target="_blank">here</a> to review.</p>
-        </section> -->
-
-        <section>
-          <h2>Web APIs Overview</h2>
-          <ul>
-            <li class="green">What is an API?</li>
-            <li class="green">What APIs Can Access</li>
-            <li class="green">REST APIs</li>
-          </ul>
-        </section>
-
-        <!-- END SLIDE -->
-        <section style="text-align: left">
-          <h1>THE END</h1>
-          <p>Thank you for your attention!</p>
-        </section>
       </div>
+      -->
+
+      <div class="slide">
+        <h2>Marvel API Key Exercise</h2>
+        <p>
+          Ask a user for a character name, then make an API call to fetch and
+          then display the character's thumbnail, name, and description to the
+          user.
+        </p>
+        <p>
+          <a
+            href="https://docs.google.com/document/d/1DGGzSVDqqoes5M5rTxVd9n6d_aP25An8X0YMudwBfAg/edit?usp=sharing"
+            target="_blank"
+            >Click here</a
+          >
+          for the instructions and links to resources to help you sign up for
+          an API key, use <code style="color: aqua">fetch()</code>.
+        </p>
+
+        <aside class="notes"></aside>
+      </div>
+
+      <!--
+      <div class="slide">
+        <h2>Courses in Pluralsight</h2>
+        <p><a href="https://app.pluralsight.com/library/courses/creating-web-apis-developers-love/table-of-contents" target="_blank">Build your own API</a></p>
+        <p><a href="https://app.pluralsight.com/library/courses/google-maps-api-get-started/table-of-contents" target="_blank">Use Google Maps API</a></p>
+      </div>
+      -->
+
+      <div class="slide">
+        <h2>More on Web APIs</h2>
+        <p>
+          Watch these
+          <a
+            href="https://docs.google.com/document/d/1uzAOfnqKt_tnuI7kWHu5Sc_jMtlzuP1EeMmN0enhSuY/edit#heading=h.xqz064e2bzsd"
+            target="_blank"
+            >Web API videos</a
+          >.
+        </p>
+      <!--
+        <a href="https://trello.com/b/RQrD5Ye2/" target="_blank"><img width="300" src="img/trello-logo-blue.png" alt="Trello logo"></a>
+        <img src="img/exercise.gif" alt="Exercise Time">
+      -->
+      </div>
+
+      <!--
+      <div class="slide">
+        <h2>Introduction to APIs Roundup</h2>
+        <p>Click <a href="https://docs.google.com/document/d/1tIE4zPw2t7e8kxJknyILRCoM8VY5xXjaZ7Dpl9jjtdg/edit?usp=sharing" target="_blank">here</a> to review.</p>
+      </div>
+      -->
+
+      <div class="slide">
+        <h2>Web APIs Overview</h2>
+        <ul>
+          <li class="green">What is an API?</li>
+          <li class="green">What APIs Can Access</li>
+          <li class="green">REST APIs</li>
+        </ul>
+      </div>
+
+      <div class="slide">
+        <h2>THE END</h2>
+        <p>Thank you for your attention!</p>
+      </div>
+
     </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="js/zoomin.js"></script>
-    <script src="lib/js/head.min.js"></script>
-    <script src="js/reveal.js"></script>
-
-    <script>
-      // Full list of configuration options available at:
-      // https://github.com/hakimel/reveal.js#configuration
-      Reveal.initialize({
-        controls: true,
-        progress: true,
-        history: true,
-        center: true,
-
-        transition: "slide", // none/fade/slide/convex/concave/zoom
-
-        // Optional reveal.js plugins
-        dependencies: [
-          {
-            src: "lib/js/classList.js",
-            condition: function () {
-              return !document.body.classList;
-            },
-          },
-          {
-            src: "plugin/markdown/marked.js",
-            condition: function () {
-              return !!document.querySelector("[data-markdown]");
-            },
-          },
-          {
-            src: "plugin/markdown/markdown.js",
-            condition: function () {
-              return !!document.querySelector("[data-markdown]");
-            },
-          },
-          {
-            src: "plugin/highlight/highlight.js",
-            async: true,
-            callback: function () {
-              hljs.initHighlightingOnLoad();
-            },
-          },
-          { src: "plugin/zoom-js/zoom.js", async: true },
-          { src: "plugin/notes/notes.js", async: true },
-        ],
-      });
-    </script>
   </body>
 </html>
