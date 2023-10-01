@@ -5,15 +5,16 @@
     <title>AnnieCannons Intro to API slides</title>
     <link rel="icon" href="https://anniecannons.org/favicon.png" />
 
-    <link rel="stylesheet" href="s5/ui/default/slides.css" type="text/css" media="projection" id="slideProj" />
-    <link rel="stylesheet" href="s5/ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
-    <link rel="stylesheet" href="s5/ui/default/print.css" type="text/css" media="print" id="slidePrint" />
-    <link rel="stylesheet" href="s5/ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/warren-bank/fork-js-s5/ui/default/slides.css" type="text/css" media="projection" id="slideProj" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/warren-bank/fork-js-s5/ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/warren-bank/fork-js-s5/ui/default/print.css" type="text/css" media="print" id="slidePrint" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/warren-bank/fork-js-s5/ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/warren-bank/fork-js-s5/ui/customizations/01/style.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/styles/default.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/styles/github-dark.min.css" />
     <link rel="stylesheet" href="css/styles.css" />
 
-    <script src="s5/ui/default/slides.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/gh/warren-bank/fork-js-s5/ui/default/slides.js" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/highlight.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/languages/javascript.min.js"></script>
     <script src="js/scripts.js"></script>
@@ -1029,8 +1030,8 @@ fetch('http://example.com/movies.json', {
 })
 </code></pre>
         <p class="fragment incremental">Notice that both requests have a <span style="color: aqua;">url string</span> as a parameter.</p>
-        <p class="fragment incremental">The <span style="color: aqua;">POST</span> request has an additional parameter: an <span style="color: aqua;">object</span>.<br>
-        <span class="fragment incremental">The object in the <span style="color: aqua;">POST</span> request has 2 properties:</span></p>
+        <p class="fragment incremental">The <span style="color: aqua;">POST</span> request has an additional parameter: an <span style="color: aqua;">object</span>.</p>
+        <p class="fragment incremental">The object in the <span style="color: aqua;">POST</span> request has 2 properties:</span></p>
         <ul class="incremental">
           <li class="fragment"><code style="color: aqua;">method</code>, which must have a value of <span style="color: aqua;">'POST'</span></li>
           <li class="fragment"><code style="color: aqua;">body</code>, which must utilize the <span style="color: aqua;">JSON.stringify()</span> method.
